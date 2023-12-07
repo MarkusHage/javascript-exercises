@@ -1,6 +1,23 @@
-const sumAll = function() {
-
+const sumAll = function(a, b) {
+    let sum = 0;
+    if (a < 0 || isNaN(a) || typeof a === "string" || b < 0 || isNaN(b) || typeof b === "string") {
+        return 'ERROR';
+    } else {
+        if (a < b) {
+            for (let i = a; i < (b + 1); i++) {
+                sum += i
+            }
+            return sum;
+        } else {
+            for (let i = b; i < (a + 1); i++) {
+                sum += i
+            }
+            return sum;
+        }
+    } 
 };
+
+
 
 // Do not edit below this line
 module.exports = sumAll;
